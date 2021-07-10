@@ -34,10 +34,6 @@ def isValidWord(word, hand, wordList):
 	
 	wordFreq = getFrequencyDict(word)
 
-	for i in wordFreq:
-		if wordFreq[i] >= hand.get(i, 0):
-			print(wordFreq[i])
-			return False
 
 	
 
