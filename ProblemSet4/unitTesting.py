@@ -1,3 +1,4 @@
+from os import PRIO_PGRP
 from ps4a import *
 
 
@@ -30,9 +31,13 @@ wordList = loadWords()
 
 
 def isValidWord(word, hand, wordList):
-
+	
 	wordFreq = getFrequencyDict(word)
-	print(wordFreq)
+
+	for i in wordFreq:
+		if wordFreq[i] >= hand.get(i, 0):
+			print(wordFreq[i])
+			return False
 
 	
 
