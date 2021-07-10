@@ -1,7 +1,7 @@
 from ps4a import *
 
 
-# wordList = loadWords()
+wordList = loadWords()
 # frequencyDict = getFrequencyDict(sequence)
 
 # def getWordScore(word, n):
@@ -27,12 +27,15 @@ from ps4a import *
 # 	for char in word:
 # 		hand[char] -= 1
 # 	return hand
-# 
-# hand = {'i':3, 'p':4, 'k':6, 'e':1, 'm':1, 'u':3, 's':3, 'h':5, 'a':4, 'd': 4}
-# word = 'IPEK'
-# print(updateHand(hand, word))
+
 
 def isValidWord(word, hand, wordList):
+
+	wordFreq = getFrequencyDict(word)
+	print(wordFreq)
+
 	
-	chars = [char for char in word]
-	
+
+word = 'AAL'
+hand = {'i':3, 'p':4, 'k':6, 'e':1, 'm':1, 'u':3, 's':3, 'h':5, 'a':4, 'd': 4}
+print(isValidWord(word, hand, wordList))
