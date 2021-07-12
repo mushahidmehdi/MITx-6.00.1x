@@ -15,7 +15,6 @@ wordList = loadWords()
 # 		wordScore += 50
 # 
 # 	return wordScore
-# word = 'ipek'
 # n = 4
 # print(getWordScore(word, n))
 # 
@@ -30,13 +29,56 @@ wordList = loadWords()
 # 	return hand
 
 
-def isValidWord(word, hand, wordList):
-	
-	wordFreq = getFrequencyDict(word)
+#def isValidWord(word, hand, wordList):
+# 
+# 	# Gurded Statement! 
+# 	if not word in wordList:
+# 		return False
+# 
+# 	wordFreq = getFrequencyDict(word)
+# 	print(wordFreq)
+# 	for char in wordFreq:
+# 		if wordFreq[char] > hand.get(char, 0):
+# 			return False
+# 	
+# 	return True
 
 
-	
+def play(hand, wordList, n):
 
-word = 'AAL'
-hand = {'i':3, 'p':4, 'k':6, 'e':1, 'm':1, 'u':3, 's':3, 'h':5, 'a':4, 'd': 4}
-print(isValidWord(word, hand, wordList))
+	totalScore = 0
+	handLength = calculateHandlen(hand)
+	print(handLength)
+
+	while handLength > 0:
+		# Display the hand
+		print("Current Hand:", end= ' ')
+		displayHand(hand)
+
+		playerInput = input("Enter word, or a '.' to indicate that you are finished: ").lower()
+
+		if playerInput == '.':
+			break
+
+		else:
+			if not isValidWord(playerInput, hand, wordList):
+				print("Invalid word, please try again.")
+
+			else:
+				scoreEarned = getWordScore(playerInput, n)
+				totalScore += scoreEarned
+				print(str(playerInput) + " earned " + str(scoreEarned) + " points.", end=" ")
+				print("Total: " + str(totalScore) + " points")
+				hand = updateHand(hand, playerInput)
+				handLength = calculateHandlen(hand)
+
+	if playerInput == '.' or handLength == 0:
+		return ("Total score: " + str(totalScore))
+
+
+
+word = wordList[random.randint(0, len(wordList))]
+n = len(word)
+hand = dealHand(n)
+
+print(play(hand, wordList, n))
