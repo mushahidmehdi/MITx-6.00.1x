@@ -5,3 +5,4 @@ MITx 6.00.1x Introduction to Computer Science and Programming Using Python
 
 ![Puppet Forge endorsement](https://img.shields.io/puppetforge/e/mushahidmehdi/MITx-6.00.1x?style=plastic)
 ![Liberapay goal progress](https://img.shields.io/liberapay/goal/Changaco)
+![Arch Linux package](https://img.shields.io/archlinux/v/core/x86_64/pacman)
