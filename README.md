@@ -1,3 +1,4 @@
+![APM](https://img.shields.io/apm/l/vim-mode?style=plastic)
 # MITx-6.00.1x
 MITx 6.00.1x Introduction to Computer Science and Programming Using Python
 
