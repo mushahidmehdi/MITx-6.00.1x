@@ -234,7 +234,7 @@ def playHand(hand, wordList, n):
         displayHand(hand)
         
         # Ask user for input
-        playerInput = input("Enter word, or a '\.' to indicate that you are finished: ").lower()
+        playerInput = input("Enter word, or a '.' to indicate that you are finished: ").lower()
 
         # If the input is a single period:
         if playerInput == '.':
@@ -277,8 +277,28 @@ def playGame(wordList):
  
     2) When done playing the hand, repeat from step 1    
     """
-    # TO DO ... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this line when you code the function
+
+
+    finished = False
+    lastHand = {}
+    while not finished:
+        playerInput = input("Enter n to deal a new hand, r to replay the last and, or e to end game: ")
+        if playerInput == 'n':
+            hand = dealHand(HAND_SIZE)
+            lastHand = hand.copy()
+            playHand(hand, wordList, HAND_SIZE)
+        elif playerInput == 'r':
+            if lastHand == {}:
+                print ("You have not played a hand yet. Please play a new hand first!")
+            else:
+                playHand(lastHand, wordList, HAND_SIZE)
+            
+        elif playerInput == 'e':
+            finished = True
+            
+        else:
+            print("Invalid command.")
+
    
 
 
