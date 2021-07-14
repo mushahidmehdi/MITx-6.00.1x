@@ -259,7 +259,7 @@ def playHand(hand, wordList, n):
     # Game is over (user entered a '.' or ran out of letters), so tell user the total score
 
     if playerInput == '.' or wordsInHand == 0:
-        return ("Total score: " + str(totalScore))
+        return ("Goodbye! Total score: " + str(totalScore) + 'points.')
 
 
 # Problem #5: Playing a game

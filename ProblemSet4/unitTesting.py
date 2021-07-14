@@ -1,4 +1,5 @@
 from ps4a import *
+from ps4b import *
 
 
 wordList = loadWords()
@@ -119,3 +120,73 @@ wordList = loadWords()
 #print(play(wordList))
 #
 
+def play(wordList):
+    """
+    Allow the user to play an arbitrary number of hands.
+ 
+    1) Asks the user to input 'n' or 'r' or 'e'.
+        * If the user inputs 'e', immediately exit the game.
+        * If the user inputs anything that's not 'n', 'r', or 'e', keep asking them again.
+
+    2) Asks the user to input a 'u' or a 'c'.
+        * If the user inputs anything that's not 'c' or 'u', keep asking them again.
+
+    3) Switch functionality based on the above choices:
+        * If the user inputted 'n', play a new (random) hand.
+        * Else, if the user inputted 'r', play the last hand again.
+      
+        * If the user inputted 'u', let the user play the game
+          with the selected hand, using playHand.
+        * If the user inputted 'c', let the computer play the 
+          game with the selected hand, using compPlayHand.
+
+    4) After the computer or user has played the hand, repeat from step 1
+
+    wordList: list (string)
+    """
+
+def play(wordList):
+	playing = False
+	lastHand = {}
+	while not playing:
+		playerInput = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
+
+		if playerInput == 'e':
+			playing = True
+
+		elif playerInput == 'r':
+			if lastHand == {}:
+				print ("You have not played a hand yet. Please play a new hand first!")
+			else:
+				choosePlayer = input("Enter u to have yourself play, c to have the computer play: ")
+				if choosePlayer == 'u':
+					playHand(lastHand, wordList, HAND_SIZE)
+
+				elif choosePlayer == 'c':
+					compPlayHand(lastHand, wordList, HAND_SIZE)
+
+				else:
+					print('Invalid command.')
+
+		elif playerInput == 'n':
+			breakLoop = False
+			while not breakLoop:
+				choosePlayer = input("Enter u to have yourself play, c to have the computer play: ")
+
+				if choosePlayer == 'u':
+					hand = dealHand(HAND_SIZE)
+					lastHand = hand.copy()
+					playHand(hand, wordList, HAND_SIZE)
+					break
+				elif choosePlayer == 'c':
+					hand = dealHand(HAND_SIZE)
+					lastHand = hand.copy()
+					compPlayHand(hand, wordList, HAND_SIZE)
+					break
+				else:
+					print('Invalid command.')
+		else:
+			print("Invalid command.")
+
+
+print(play(wordList))

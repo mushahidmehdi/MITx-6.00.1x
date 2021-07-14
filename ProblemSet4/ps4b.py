@@ -124,11 +124,16 @@ def playGame(wordList):
 
     wordList: list (string)
     """
-    # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+    playing = False
+    lastHand = {}
+    userInput = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
 
-        
-#
+    while not playHand:
+        if userInput == 'n':
+            hand = playHand()
+
+
+
 # Build data structures used for entire session and play game
 #
 if __name__ == '__main__':
