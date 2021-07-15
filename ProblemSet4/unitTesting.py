@@ -187,6 +187,4 @@ def play(wordList):
 					print('Invalid command.')
 		else:
 			print("Invalid command.")
-
-
 print(play(wordList))
