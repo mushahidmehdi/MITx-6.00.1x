@@ -83,18 +83,17 @@ class Hand(object):
         returns: Boolean (if the word was or was not made)
         """
         # Your code here
-        
+        updateHand = self.hand.copy()
         for char in word:
             try:
-                self.hand[char] -= 1
+                updateHand[char] -= 1
             except KeyError:
                 return False
 
-        UpdateHand = {}
-        for char in word:
-            UpdateHand[char] = UpdateHand.get(char, 0) + 1
+        for char in updateHand.keys():
+            if updateHand[char] < 0:
+                return False  
 
-        self.hand = UpdateHand
         return True
 
 
