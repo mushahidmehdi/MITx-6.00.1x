@@ -1,3 +1,4 @@
+from io import SEEK_CUR
 import string
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -159,9 +160,9 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less 
         code is repeated
         '''
-        super.__init__()
+        Message.__init__(self, text)
         self.shift = shift
-
+    
 
     def get_shift(self):
         '''
@@ -169,7 +170,7 @@ class PlaintextMessage(Message):
         
         Returns: self.shift
         '''
-        pass #delete this line and replace with your code here
+        return self.shift
 
     def get_encrypting_dict(self):
         '''
@@ -177,7 +178,8 @@ class PlaintextMessage(Message):
         
         Returns: a COPY of self.encrypting_dict
         '''
-        pass #delete this line and replace with your code here
+        self.encrypting_dict = self.build_shift_dict(self.shift)
+        return self.encrypting_dict
 
     def get_message_text_encrypted(self):
         '''
@@ -185,7 +187,8 @@ class PlaintextMessage(Message):
         
         Returns: self.message_text_encrypted
         '''
-        pass #delete this line and replace with your code here
+        self.message_text_encrypted = self.apply_shift(self.shift)
+        return self.message_text_encrypted
 
     def change_shift(self, shift):
         '''
@@ -198,7 +201,12 @@ class PlaintextMessage(Message):
 
         Returns: nothing
         '''
-        pass #delete this line and replace with your code here
+        self.last_shift = self.shift
+        self.shift = shift
+        diff = self.last_shift - self.shift
+
+        self.encrypting_dict = self.build_shift_dict(diff)
+        self.message_text_encrypted = self.message_text_encrypted(diff)
 
 
 class CiphertextMessage(Message):
@@ -230,7 +238,7 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        pass #delete this line and replace with your code here
+        pass #delete this line and replace with your c  ode here
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
