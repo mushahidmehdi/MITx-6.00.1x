@@ -1,16 +1,18 @@
 from selectionSort import numList
-def bubble_sort(List):
+print(numList)
+
+def bubble_sort(arr):
 	flag = False
 	while not flag:
 		flag = True
-		for i in range(1, len(List)):
-			if List[i] < List[i-1]:
+		for i in range(1, len(arr)):
+			if arr[i] < arr[i-1]:
+				temp = arr[i-1]
+				arr[i-1] = arr[i]
+				arr[i] = temp
 				flag = False
-				temp = List[i]
-				List[i] = List[i-1]
-				List[i-1] = temp
-	
-	return List
+	return arr
 
+print(bubble_sort(numList))
 
 		
