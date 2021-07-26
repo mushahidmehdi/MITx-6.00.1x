@@ -121,7 +121,7 @@ uphold the academic integrity for MITx.
 - An Example
 
 
-##Lecture 14 – Summary
+## Lecture 14 – Summary
 
 
 
