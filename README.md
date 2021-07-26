@@ -156,9 +156,9 @@ weighted average of the following:
 - Final exam – 25%
 In order to earn a certificate for 6.00.1x, students must pass the course with a grade of C
 or better. The following grading breakdown will apply:
-- >= 80%: A
-- >= 65%: B
-- >= 55%: C
+-  >= 80%: A
+-  >= 65%: B
+-  >= 55%: C
 
 
 
