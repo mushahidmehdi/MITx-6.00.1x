@@ -125,8 +125,40 @@ uphold the academic integrity for MITx.
 
 
 
+##  Exercises and Exams
+All course material will be released at 14:00 UTC. Finger exercises have no due date, but
+we encourage students to complete them as they view the lectures. See the Calendar
+tab for Problem Set due dates. Regrettably, extensions are unavailable for any
+assignment but your lowest problem set score is dropped.
+
+All problem sets will be due at 23:30 or 11:30 pm UTC. This is the Coordinated Universal
+Time, also known as the Greenwich Mean Time. Convert to your local time zone using
+an online converter such as this [one:](http://www.timeanddate.com/worldclock/converter.html)
+Exams are scheduled in advance. The exams will take place online, on the course
+website. Exams are timed – once you begin during the exam period, you will have 8
+hours to complete it.
+- The Midterm will take place from July 2 (14:00 UTC) to July 6 (23:30 UTC).
+- The Final Exam will take place from July 30 (14:00 UTC) to Aug 3 (23:30 UTC)
+
+During the exam period, the forums will be shut down. You will still be able to read
+posts but you will not be able to post any questions. The honor code prohibits students
+from communicating with one another during the exam period in any way whatsoever –
+so please don’t discuss the exam on any other forum, website or in person with anyone
+else. 
 
 
+## Grading Policy
+In this course there will be many types of assignments. Your final grade will be a
+weighted average of the following:
+- Finger exercises (available within each lecture video sequence) – 10%
+- Problem sets – 40%
+- Midterm – 25%
+- Final exam – 25%
+In order to earn a certificate for 6.00.1x, students must pass the course with a grade of C
+or better. The following grading breakdown will apply:
+- >= 80%: A
+- >= 65%: B
+- >= 55%: C
 
 
 
