@@ -153,12 +153,12 @@ weighted average of the following:
 - Problem sets – 40%
 - Midterm – 25%
 - Final exam – 25%
-In order to earn a certificate for 6.00.1x, students must pass the course with a grade of C
-or better. The following grading breakdown will apply:
--  greater than = 80%: A
--  greator = 65%: B
--  greator = 55%: C
 
+|   ` Projects`   |  ` `  |`  `      |
+| ----------------|-----------|------------------|
+| `''`        |  `  `     | ` ''`        |
+|` ', !'` | `    `    | ` ', !' `|
+| ``              | ` ` |  `''  `            |
 
 
 
